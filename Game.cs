@@ -12,7 +12,7 @@ namespace TicTacToe
 
         public Game()
         {
-            for (int i = 0; i < 9; i++)
+            for (int i = 1; i < 10; i++)
             {
                 FieldStatus f = new FieldStatus($"Field{i}");
                 FieldStates.Add(f);
@@ -20,10 +20,13 @@ namespace TicTacToe
 
         }
 
-        public CheckWinner()
+        public void CheckWinner()
         {
-
+            // Need smarter way of doing this.
+            if (FieldStates[0].Owner != "" && FieldStates[0].Owner == FieldStates[1].Owner && FieldStates[1].Owner == FieldStates[2].Owner)
+            {
+                MessageBox.Show("WE HAVE A WINNER!");
+            }
         }
-
     }
 }
