@@ -48,7 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();            
+            SuspendLayout();
             // 
             // panel1
             // 
@@ -72,10 +72,11 @@
             pictureBox9.Location = new Point(220, 220);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(110, 110);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox9.Image = Image.FromFile(@"C:\Users\claus\source\repos\TicTacToe\Empty.png");
             pictureBox9.TabIndex = 8;
             pictureBox9.TabStop = false;
             pictureBox9.Click += pictureBox9_Click;
-            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // pictureBox8
             // 
@@ -83,10 +84,11 @@
             pictureBox8.Location = new Point(110, 220);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(110, 110);
+            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox8.Image = Image.FromFile(@"C:\Users\claus\source\repos\TicTacToe\Empty.png");
             pictureBox8.TabIndex = 7;
             pictureBox8.TabStop = false;
             pictureBox8.Click += pictureBox8_Click;
-            pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // pictureBox7
             // 
@@ -94,10 +96,11 @@
             pictureBox7.Location = new Point(0, 220);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(110, 110);
+            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox7.Image = Image.FromFile(@"C:\Users\claus\source\repos\TicTacToe\Empty.png");
             pictureBox7.TabIndex = 6;
             pictureBox7.TabStop = false;
             pictureBox7.Click += pictureBox7_Click;
-            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // pictureBox6
             // 
@@ -105,10 +108,11 @@
             pictureBox6.Location = new Point(220, 110);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(110, 110);
+            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox6.Image = Image.FromFile(@"C:\Users\claus\source\repos\TicTacToe\Empty.png");
             pictureBox6.TabIndex = 5;
             pictureBox6.TabStop = false;
             pictureBox6.Click += pictureBox6_Click;
-            pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // pictureBox5
             // 
@@ -116,10 +120,11 @@
             pictureBox5.Location = new Point(110, 110);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(110, 110);
-            pictureBox5.TabIndex = 3;
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.Image = Image.FromFile(@"C:\Users\claus\source\repos\TicTacToe\Empty.png");
+            pictureBox5.TabIndex = 4;
             pictureBox5.TabStop = false;
             pictureBox5.Click += pictureBox5_Click;
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // pictureBox4
             // 
@@ -127,10 +132,11 @@
             pictureBox4.Location = new Point(0, 110);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(110, 110);
-            pictureBox4.TabIndex = 4;
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.Image = Image.FromFile(@"C:\Users\claus\source\repos\TicTacToe\Empty.png");
+            pictureBox4.TabIndex = 3;
             pictureBox4.TabStop = false;
             pictureBox4.Click += pictureBox4_Click;
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // pictureBox3
             // 
@@ -138,10 +144,11 @@
             pictureBox3.Location = new Point(220, 0);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(110, 110);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.Image = Image.FromFile(@"C:\Users\claus\source\repos\TicTacToe\Empty.png");
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // pictureBox2
             // 
@@ -149,10 +156,11 @@
             pictureBox2.Location = new Point(110, 0);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(110, 110);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.Image = Image.FromFile(@"C:\Users\claus\source\repos\TicTacToe\Empty.png");
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // pictureBox1
             // 
@@ -160,19 +168,20 @@
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(110, 110);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.Image = Image.FromFile(@"C:\Users\claus\source\repos\TicTacToe\Empty.png");
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(552, 450);
+            ClientSize = new Size(534, 436);
             Controls.Add(panel1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "TicTacToe";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();

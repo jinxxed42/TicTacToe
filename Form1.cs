@@ -2,18 +2,29 @@ namespace TicTacToe
 {
     public partial class Form1 : Form
     {
+        Game g;
+
         public Form1()
         {
             InitializeComponent();
-            Game g = new Game();
-
+            g = new Game();
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Image image = Image.FromFile(@"C:\Users\claus\source\repos\TicTacToe\Cross.png");
-            pictureBox1.Image = image;
+            if (g.FieldStates[0].Owner != "")
+            {
+                Image image = Image.FromFile(@"C:\Users\claus\source\repos\TicTacToe\Empty.png");
+                pictureBox1.Image = image;
+                g.FieldStates[0].Owner = "";
+            }
+            else
+            {
+                Image image = Image.FromFile(@"C:\Users\claus\source\repos\TicTacToe\Cross.png");
+                pictureBox1.Image = image;
+                g.FieldStates[0].Owner = "Cross";
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
