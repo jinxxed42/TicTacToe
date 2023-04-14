@@ -10,8 +10,20 @@ namespace TicTacToe
     {
         public List<FieldStatus> FieldStates = new List<FieldStatus>();
 
+        public string Turn { get; set; }
+
+        private static Random _rand = new Random();
+
         public Game()
         {
+            if (_rand.Next(0,1) == 0)
+            {
+                Turn = "Cross";
+            }
+            else
+            {
+                Turn = "Circle";
+            }
             for (int i = 1; i < 10; i++)
             {
                 FieldStatus f = new FieldStatus($"Field{i}");
