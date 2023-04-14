@@ -22,38 +22,40 @@ namespace TicTacToe
 
         public void CheckWinner()
         {
-            // Need smarter way of doing this. Maybe a loop.
-            if (FieldStates[0].Owner != "" && FieldStates[0].Owner == FieldStates[1].Owner && FieldStates[1].Owner == FieldStates[2].Owner)
+            string winner = "";
+
+            for (int i = 0; i < FieldStates.Count; i +=3 )
             {
-                MessageBox.Show("WE HAVE A WINNER!");
+                if (FieldStates[i].Owner != "" && FieldStates[i].Owner == FieldStates[i+1].Owner && FieldStates[i+1].Owner == FieldStates[i+2].Owner)
+                {
+                    winner = FieldStates[i].Owner;
+                    break;
+                }
             }
-            else if (FieldStates[3].Owner != "" && FieldStates[3].Owner == FieldStates[4].Owner && FieldStates[4].Owner == FieldStates[5].Owner)
+            if (winner == "")
             {
-                MessageBox.Show("WE HAVE A WINNER!");
+                for (int i = 0; i < 3; i++)
+                {
+                    if (FieldStates[i].Owner != "" && FieldStates[i].Owner == FieldStates[i+3].Owner && FieldStates[i+3].Owner == FieldStates[i+6].Owner)
+                    {
+                        winner = FieldStates[i].Owner;
+                        break;
+                    }
+                }
             }
-            else if (FieldStates[6].Owner != "" && FieldStates[6].Owner == FieldStates[7].Owner && FieldStates[7].Owner == FieldStates[8].Owner)
+
+            if (winner == "" && FieldStates[0].Owner != "" && FieldStates[0].Owner == FieldStates[4].Owner && FieldStates[4].Owner == FieldStates[8].Owner)
             {
-                MessageBox.Show("WE HAVE A WINNER!");
+                winner = FieldStates[0].Owner;
             }
-            else if (FieldStates[0].Owner != "" && FieldStates[0].Owner == FieldStates[3].Owner && FieldStates[3].Owner == FieldStates[6].Owner)
+            if (winner == "" && FieldStates[6].Owner != "" && FieldStates[6].Owner == FieldStates[4].Owner && FieldStates[4].Owner == FieldStates[2].Owner)
             {
-                MessageBox.Show("WE HAVE A WINNER!");
+                winner = FieldStates[6].Owner;
             }
-            else if (FieldStates[1].Owner != "" && FieldStates[1].Owner == FieldStates[4].Owner && FieldStates[4].Owner == FieldStates[7].Owner)
+
+            if (winner != "")
             {
-                MessageBox.Show("WE HAVE A WINNER!");
-            }
-            else if (FieldStates[2].Owner != "" && FieldStates[2].Owner == FieldStates[5].Owner && FieldStates[5].Owner == FieldStates[8].Owner)
-            {
-                MessageBox.Show("WE HAVE A WINNER!");
-            }
-            else if (FieldStates[0].Owner != "" && FieldStates[0].Owner == FieldStates[4].Owner && FieldStates[4].Owner == FieldStates[8].Owner)
-            {
-                MessageBox.Show("WE HAVE A WINNER!");
-            }
-            else if (FieldStates[6].Owner != "" && FieldStates[6].Owner == FieldStates[4].Owner && FieldStates[4].Owner == FieldStates[2].Owner)
-            {
-                MessageBox.Show("WE HAVE A WINNER!");
+                MessageBox.Show("The winner is " + winner + "!");
             }
         }
     }
